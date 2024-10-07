@@ -75,7 +75,7 @@ function ContextApp({ children }) {
   function revemoCartItem(product) {
     const existingProduct = cartItems.find((item) => item.id === product.id);
 
-    if (existingProduct.quantity === 1) {
+    if (existingProduct) {
       setCartItems(cartItems.filter((item) => item.id !== product.id));
     }
   }
